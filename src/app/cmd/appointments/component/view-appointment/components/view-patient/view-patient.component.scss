@@ -16,8 +16,8 @@
     
 // }
 .module1 {
-    width: 465px;
-    height: 250px;
+    width: 390px;
+    height: 200px;
     border: 1px solid #ddd;
     color: #18385c;
     background-color:white;
@@ -26,7 +26,8 @@
     padding-top: 20px;
     margin-top: 30px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-left: 40px;
+    float: left;
 }
 .img {
     width:75px;
@@ -43,7 +44,7 @@
 .small2{
     
     word-spacing:15px ;
-    font-size: 15px;
+    font-size: 11px;
     font-style: bold;
 
 }
@@ -51,9 +52,9 @@
     margin:top 25px;
     
 }
-.small4
+.small1
 {
     word-spacing: 15px;
-    font-size: 13px;
+    font-size: 11px;
 
 }

@@ -1,20 +1,105 @@
+// .container
+// {
+//     width:465px;
+//     height: 530px;
+//     background-color:white;
+//     border: 1px solid #ddd;
+//     border-radius: 10px;    
+//     row-gap: 5px; 
+//     margin-left: 10px;
+    
+
+// }
+// h1
+// {
+
+//   font-size: 25px;
+//   color: rgb(23, 23, 56);
+//   margin-left: -3px;
+//   padding-left: 10px;
+//   margin-top: 3px;
+//   font-family: "adobe-clean", sans-serif;
+//   font-weight: bold;
+// }
+// .icon
+// {
+//    float:right;
+//    margin-right: 9px;
+//    size: 35px;
+//    text-align: right;
+//    font-family: "adobe-clean", sans-serif;
+// }
+// .container1
+// {
+// width: 350px;
+// height: 70px;
+// margin-left: auto;
+// background-color:white;
+// border-style: hidden;
+// border-radius: 8px;  
+// border: 1px  solid #ddd;
+// row-gap: 5px;
+// margin-bottom: 5px;
+// }
+// h2
+// {
+// font-size: 13px;
+// color:  rgb(23, 23, 56);
+// margin-left: 10px;
+// margin-top: 5px;
+// font-family: "adobe-clean", sans-serif;
+
+// }
+// p
+// {
+//  font-size: 9px;
+//  margin-left: 15px;
+//  font-family: "adobe-clean", sans-serif;
+
+// }
+// #button
+// {
+//    float:right;
+//    padding-right: 15px;
+//    margin-right: 8px;
+//    margin-top: 2px;
+//    margin-bottom: 20px;
+//    text-size-adjust: 1px;
+//    font-size: 4px;
+//    font-family: "adobe-clean", sans-serif;
+  
+// }
+// .btn1
+// {
+//    background-color: rgb(23, 23, 56);
+//    color: white;
+//    font-size: large;
+//    font-family: "adobe-clean", sans-serif;
+// }
+// .btn
+// {
+//    background-color: rgba(2, 75, 63, 0.829);
+//     color: white;
+//     font-size: 8px;
+//     font-family: "adobe-clean", sans-serif;
+// }
 .container
 {
-    width:465px;
-    height: 530px;
+    width: 385px;
+    height: 435px;
     background-color:white;
     border: 1px solid #ddd;
     border-radius: 10px;    
     row-gap: 5px; 
-    margin-left: 10px;
+    margin-left: 25px;
     
 
 }
 h1
 {
 
-  font-size: 25px;
-  color: rgb(23, 23, 56);
+  font-size: 18px;
+  color:#18385c;
   margin-left: -3px;
   padding-left: 10px;
   margin-top: 3px;
@@ -25,7 +110,7 @@ h1
 {
    float:right;
    margin-right: 9px;
-   size: 35px;
+   size: 30px;
    text-align: right;
    font-family: "adobe-clean", sans-serif;
 }
@@ -37,7 +122,7 @@ margin-left: auto;
 background-color:white;
 border-style: hidden;
 border-radius: 8px;  
-border: 1px  solid #ddd;
+border: 1px  solid black;
 row-gap: 5px;
 margin-bottom: 5px;
 }
@@ -71,10 +156,11 @@ p
 }
 .btn1
 {
-   background-color: rgb(23, 23, 56);
+   background-color: #18385c;
    color: white;
    font-size: large;
    font-family: "adobe-clean", sans-serif;
+   border-color: #18385c;
 }
 .btn
 {

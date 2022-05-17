@@ -5,22 +5,23 @@
   padding: 2rem;
   padding-bottom: 1rem;
   background-color: white;
-  width: 465px;
-  height: 250px;
+  width: 95%;
+  height: 75%;
   border: 0.1px solid lightgray;
-  float: left;
   padding-top: 1rem;
   margin-top: 28px;
+  float: left;
+  
 }
 .headingName{
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
 }
 .btn{
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 .font_12{
-  font-size: 15px;
+  font-size: 10px;
   margin-top: 1rem;
   text-align: center;
 }
@@ -64,3 +65,4 @@
 .diabetes{
   animation: heartbeat 1s infinite;
 }
+
