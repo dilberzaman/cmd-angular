@@ -1,4 +1,4 @@
-<form (ngSubmit)="confirm();">
+<!-- <!-- <form (ngSubmit)="confirm();">
     <div class="main1" *ngIf="step== 2">
       <span><strong>Comment </strong></span>
          <button (click)="confirmp()" type="button" class="primary">save</button> 
@@ -15,4 +15,31 @@
      </div>
     </form> 
    
-   
+    -->
+    <!-- <form (ngSubmit)="confirm();">
+      <div class="main1" *ngIf="step== 2">
+        <span><strong>comment </strong></span>
+           <button (click)="confirmp()" type="button" class="primary">save</button> 
+           <br><br>
+           <p>patients has borderline of cholestrol.He need to maintain proper diet and  exercise regularly</p>
+           <hr>
+          
+           </div>
+       <div class="main1" *ngIf="step== 1">
+       <span><strong>Comment </strong></span>
+       <button (click)="confirm()" type="button" class="primary">edit</button>
+         <br><br>
+       <p>patients has borderline of cholestrol.He need to maintain proper diet and  exercise regularly </p>
+       </div>
+      </form> 
+     
+     
+   --> -->
+   <div class="container">
+    <div class="headingName">Comments<span><button type="button" id="Btn" (click)="check()" class="btn btn-outline-success" >{{ans}}</button></span>       
+  </div>
+  <div class="row">
+  <div  class="margin">
+    <input  type="text" name="Comment" class="form-control" string="Comment" [disabled]="isDisabled" required min="40" max="120" value="{{Comments.Comment}}" /><span style="opacity: 0.5; margin-left: 1rem;"></span>
+    </div>
+    </div>

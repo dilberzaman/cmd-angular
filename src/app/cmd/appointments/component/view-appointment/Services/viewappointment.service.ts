@@ -10,8 +10,12 @@ export class ViewappointmentService {
   constructor(private _http: HttpClient) { }
 
   getvieweditvitals(){
-    return this._http.get<any[]>("http://106.51.36.182:8093/api/Vitals")
+    return this._http.get<any[]>("http://106.51.36.182:8093/api/Vital")
 }
+   updatevitaldata(Id:number,data:any){
+     return this._http.post("http://106.51.36.182:8093/api/Vital",data)
+   }
+
     getViewAllPatients() {
      return this._http.get<any[]>("http://106.51.36.182:8090/api/Patient")
    }
@@ -46,6 +50,13 @@ export class ViewappointmentService {
   }
   getmedicine(){
     return this._http.get<any[]>("106.51.36.182:8091/api/MedicinePrescriptionAssociation")
+  }
+  updatecommentdata(id: number, data: any) {
+    return this._http.post('https://106.51.3.182:8093/api/Comment',data)
+   
+  }
+  getvieweditcomments() {
+    return this._http.get<any[]>("http://106.51.36.182:8093/api/Comment")
   }
   
   

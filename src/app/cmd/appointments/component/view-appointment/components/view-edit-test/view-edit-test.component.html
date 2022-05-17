@@ -1,63 +1,24 @@
- 
-<!-- <form>
 <div id="container">
-    <h1>Tests</h1>
-    <h3><span><b>selected: </b></span><br></h3>
-    <button> {{result}} <i class='fa fa-times'></i></button>
-    
-    <h3 id="result"><b>Search:</b></h3><br>
-    <select (change)="test($event)">
-     <input type="text" class="tej" placeholder="Tests"> 
-    <option value="Dr.susan light">{{Test[1].Test}}</option>
-   
-  </select>
-     <select class="medicine" (change)="test($event)">
-      <option>--Choose here--</option>
-      <option value="CK">{{testDetails[0].TestName}}</option>
-      <option value="CKMB">Creatine kinase-MB(CKMB)</option>
-      <option value="Myoglobin">Myoglobin</option>
-      <option value="ECG">ECG</option>
-    </select>  
-    
-   
-  </div>  
-</form>   -->
-
-<!-- <div class="inputag">
-  <input
-    class="box"
-    matInput
-    formControlName="testDetails"
-    [matAutocomplete]="auto"
-    placeholder="Tests" 
-  required/><br /><br />
-  <mat-autocomplete
-    #auto="matAutocomplete"
-    [displayWith]="displayFnForTest"
-  >
-    <mat-option
-      *ngFor="let Test testDetails"     
-      [value]="Test"
-    >
-      {{ Test.name }}
-    </mat-option>
-  </mat-autocomplete> -->
-  <div id="container">
-    <h1>Tests</h1>
-    <h3><span><b>selected: </b></span><br></h3>
-    <h3 id="result"><b>Search:</b></h3><br>
-     <input
-    class="box"> 
-   <div style="width:50%;margin-left: 20px;"> 
-    <select>
-      <option *ngFor="let tes of Test" [value]="tes.Id">
-        {{tes.Id}}
-      </option>
-    </select>
-  </div>
-</div>
-
-
-
-   
+  <h1>Tests</h1>
+  <h5><span><b>selected: </b></span><br></h5>
+  <button> {{result}} <i class='fa fa-times'></i></button>
   
+  <h5 id="result"><b>Search:</b></h5><br>
+
+  <select class="medicine" (change)="test($event)">
+    <option>--Choose here--</option>
+    <option value="HEART">HEART</option>
+    <option value="kidney">kidney</option>
+    <option value="Heart">Heart</option>
+    <option value="liver">liver</option>
+    <option value="eyes">eyes</option>
+    <option value="=kidney">kidney</option>
+    <option value="leg">leg</option>
+    <option value="knee">knee</option>
+    <option value="=brain">brain</option>
+    <option value="BRAIN">BRAIN</option>
+    <option value="kidney">kidney</option>
+  </select>
+
+</div>  
+
