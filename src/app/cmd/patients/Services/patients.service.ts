@@ -8,10 +8,10 @@ export class PatientsService {
 
   }
   getViewAllPatients() {
-    return this.http.get<any[]>("https://patientapiservice20220509181756.azurewebsites.net/api/Patient")
+    return this.http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/Patient")
   }
   getMobileNumber() {
-    return this.http.get<any[]>("https://patientapiservice20220509181756.azurewebsites.net/api/ContactDetail")
+    return this.http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/ContactDetail")
   }
   addMedicine(data:any)  
   {

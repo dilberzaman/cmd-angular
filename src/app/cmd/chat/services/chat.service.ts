@@ -5,7 +5,7 @@ export class ChatService {
 
   constructor(private http: HttpClient) { }
   getPatient() {
-    return this.http.get<any[]>("https://patientapiservice20220509181756.azurewebsites.net/api/Patient")
+    return this.http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/patient")
   }
   addMedicine(data: any) {
     return this.http.post("https://cmdapiservice20220510121748.azurewebsites.net/api/MedicinePrescriptionAssociation", data)
