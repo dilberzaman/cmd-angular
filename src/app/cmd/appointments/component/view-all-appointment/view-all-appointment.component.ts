@@ -23,7 +23,6 @@ export class ViewAllAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
     this.getallappointment();
-    this.getallappointment();
 
     console.log(this.getallappointments);
     localStorage.setItem('doctorId', JSON.stringify(1));
