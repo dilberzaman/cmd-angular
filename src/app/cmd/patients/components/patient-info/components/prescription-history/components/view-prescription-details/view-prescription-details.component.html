@@ -1,0 +1,104 @@
+<div class="container" style="width:85% ; height:100%; background-color:rgb(157, 220, 245);">
+  <h1>
+    <span id="id2"> <i class='fas fa-clone'></i> </span>
+    <span id="id1">Prescription</span>
+    <a routerLink="/remove"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+  </h1>
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-xs-3">
+      <!-- <app-add-prescription>
+      </app-add-prescription> -->
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-6 ">
+
+      <div id="div1">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <h1>Prescription Detail's</h1>
+              </th>
+              <th>
+                <h1 >Total:199</h1>
+              </th>
+              <th>
+                <h1><span id="id8">3</span></h1>
+              </th>
+            </tr>
+          </thead>
+
+       
+          <tr >
+            <td>
+              <h3>1.{{Medicine[0].medicineName}}</h3>
+              <p>Don's use hot water during consume</p>
+            </td>
+            <td>
+              <h3> <i class='fas fa-rupee-sign'></i>60 <br> <span></span></h3>
+            </td>
+            <td>
+              <div class="container" id="id3">
+                <div id="id4"> <span class="label label-primary">{{Medicine[0].medicineDescription}}</span><br> <span
+                    class="glyphicon glyphicon-option-horizontal"></span>
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <span id="id7"><i class="fa fa-close"></i></span>
+                </div>
+              </div>
+              <br>
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <h3>2.{{Medicine[1].medicineName}}</h3>
+              <p>Don's use hot water during consume</p>
+            </td>
+            <td>
+              <h3> <i class='fas fa-rupee-sign'></i> 40</h3>
+            </td>
+            <td>
+              <div class="container" id="id3">
+                <div id="id4"> <span class="label label-default">{{Medicine[1].medicineDescription}}</span><br><span
+                    class="glyphicon glyphicon-option-horizontal"></span>
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                  <span id="id7"> <i class="fa fa-close"></i> </span>
+                </div>
+              </div>
+              <br>
+            </td>
+
+
+          </tr>
+          <tr>
+            <td>
+              <h3>3.{{Medicine[2].medicineName}}</h3>
+              <p>Don's use hot water during consume</p>
+            </td>
+            <td>
+              <h3> <i class='fas fa-rupee-sign'></i> 99</h3>
+            </td>
+            <td>
+              <div class="container" id="id3">
+                <div id="id4"><span class="label label-primary">{{Medicine[2].medicineDescription}}</span><br><span
+                    class="glyphicon glyphicon-option-horizontal"></span>
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                  <span id="id7"> <i class="fa fa-close"></i> </span>
+                </div>
+              </div>
+              <br>
+            </td>
+          </tr>
+
+
+        </table>
+
+        <input id="in5" type="submit" onclick="window.location.replace('/prescription')" value="Confirm" />
+
+      </div>
+    </div>
+  </div>
+</div>

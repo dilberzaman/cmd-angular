@@ -1,0 +1,46 @@
+
+ <div class="Block1">
+    <div class="col-sm-6">
+        <div class="module2">
+            <div class="img_patients">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" alt="sunil" class="img" />
+                    </div>
+                    <div class="col-sm-9 Person_Name">
+                        <span class="small">Doctor</span>
+                        <h4><b>{{data[0].doctorName}}</b></h4>
+                        <span class="small"> {{data[0].spaciality}}</span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="personal_details">
+                            <span>
+                                <p class="small"><i class="fas fa-phone"></i> {{data[0].contactDetailId}}</p>
+                                <p class="small"><i class="far fa-envelope"></i> manjusha@gmail.com</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <span>
+
+                            <div class="dr_details">
+                                <div>
+                                    <p><span class="small1">NPI NO.</span></p>
+                                    <p class="small"><b>{{data[0].npinumber}}</b></p>
+                                </div>
+                                <div>
+                                    <p><span class="small1">Practice Location</span></p>
+                                    <p class="small"><b>{{data[0].practiseLocation}}</b></p>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

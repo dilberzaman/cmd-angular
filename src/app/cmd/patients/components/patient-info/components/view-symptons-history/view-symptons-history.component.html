@@ -1,0 +1,172 @@
+<table class="body">
+    <tbody>
+
+        <span class="sample2 ">Symptoms History</span>
+
+        <!-- <a routerLink="/add-edit-sympton-history"><button class="sample1 sample2 glyphicon glyphicon-plus"></button></a> -->
+        <hr>
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-1" >
+
+            </div>
+            <div class="col-sm-5 col-xs-5 col-5 Symptoms">
+                <span class="sample">Blood in urine</span>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 col-2" >
+
+                <span class="badge">2</span>
+
+            </div>
+            <div class="col-sm-4 col-xs-4 col-4" align="center">
+                <button (click)="toggleTag1()">Show/Hide</button>
+            </div>
+            <h4 class="sample3 s1" *ngIf="showme1">25 RBC/HPF</h4>
+            <h4 class="sample4 s1" *ngIf="showme1">Dr. {{doctor[0].doctorName}}</h4>
+           
+            <!-- <div class="col-sm-2 col-xs-2 col-2">
+                <a routerLink="/add-edit-sympton-history"> <span class="glyphicon glyphicon-pencil"></span></a>
+            </div> -->
+
+             <!-- <div class="col-sm2  col-xs-2 col-2">
+                <a href="#"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+            </div>  -->
+
+
+        </div>
+
+        <hr>
+        <!--first row-->
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-1" >
+
+            </div>
+            <div class="col-sm-5  col-xs-5 col-5 Symptoms">
+                <span class="sample">Diabetis</span>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 col-2">
+
+                <span class="badge">1</span>
+
+            </div>
+            <div class="col-sm-4 col-xs-4 col-4" align="center">
+               <button (click)="toggleTag()">Show/Hide</button>
+            </div>
+            <h4 class="sample3 s1" *ngIf="showme">250 Daiabetes/Diabetes mellitus</h4>
+            <h4 class="sample4 s1" *ngIf="showme">Dr. {{doctor[0].doctorName}},Dr. {{doctor[1].doctorName}}</h4>
+            <!-- <div class="col-sm-2 col-xs-2 col-2">
+                <a routerLink="/add-edit-sympton-history"> <span class="glyphicon glyphicon-pencil"></span></a>
+            </div> -->
+
+            <!-- <div class="col-sm2  col-xs-2 col-2">
+                <a href="#"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+            </div> -->
+
+               
+        </div>
+        
+
+        <hr>
+        <!--2-->
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-1" >
+
+            </div>
+            <div class="col-sm-5  col-xs-5 col-5 Symptoms" >
+                <span class="sample">Weight Loss</span>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 col-2">
+
+                <span class="badge">2</span>
+
+            </div>
+            <div class="col-sm-4 col-xs-4 col-4" align="center">
+                <button (click)="toggleTag2()">Show/Hide</button>
+            </div>
+            <h4 class="sample3 s1" *ngIf="showme2">-------</h4>
+            <h4 class="sample4 s1" *ngIf="showme2">Dr. {{doctor[2].doctorName}}</h4>
+           
+            <!-- <div class="col-sm-2 col-xs-2 col-2">
+                <a routerLink="/add-edit-sympton-history"> <span class="glyphicon glyphicon-pencil"></span></a>
+            </div> -->
+
+            <!-- <div class="col-sm2  col-xs-2 col-2">
+                <a href="#"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+            </div> -->
+
+            
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-1" >
+
+            </div>
+            <div class="col-sm-5  col-xs-5 col-5 Symptoms" >
+                <span class="sample">Itching</span>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 col-2">
+
+                <span class="badge">2</span>
+
+            </div>
+            <div class="col-sm-4 col-xs-4 col-4" align="center">
+                <button (click)="toggleTag3()">Show/Hide</button>
+            </div>
+            <h4 class="sample3 s1" *ngIf="showme3">Normal</h4>
+            <h4 class="sample4 s1" *ngIf="showme3">Dr. {{doctor[0].doctorName}}</h4>
+           
+            <!-- <div class="col-sm-2 col-xs-2 col-2">
+                <a href="#"> <span class="glyphicon glyphicon-pencil"></span></a>
+            </div> -->
+
+            <!-- <div class="col-sm2  col-xs-2 col-2">
+                <a href="#"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+            </div> -->
+
+
+        </div>
+
+
+        <hr>
+        <!--3-->
+                
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-1" >
+
+            </div>
+            <div class="col-sm-5  col-xs-5 col-5 Symptoms">
+                <span class="sample">Indigestion</span>
+            </div>
+
+            <div class="col-sm-2 col-xs-2 col-2">
+
+                <span class="badge">2</span>
+
+            </div>
+            <div class="col-sm-4 col-xs-4 col-4" align="center">
+                <button (click)="toggleTag4()">Show/Hide</button>
+            </div>
+            <h4 class="sample3 s1" *ngIf="showme4">acid reflux</h4>
+            <h4 class="sample4 s1" *ngIf="showme4">Dr. {{doctor[1].doctorName}}</h4>
+           
+            <!-- <div class="col-sm-2 col-xs-2 col-2">
+                <a href="#"> <span class="glyphicon glyphicon-pencil"></span></a>
+            </div> -->
+
+            <!-- <div class="col-sm2  col-xs-2 col-2">
+                <a href="#"> <span class=" sample5 glyphicon glyphicon-remove"></span> </a>
+            </div> -->
+
+
+        </div>
+
+        <hr>
+
+
+
+    </tbody>
+</table>
+<br>

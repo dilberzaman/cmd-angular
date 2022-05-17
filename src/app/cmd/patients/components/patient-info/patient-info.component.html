@@ -1,0 +1,114 @@
+<app-top-header></app-top-header>
+<app-sidebar></app-sidebar>
+<div class="row" id="main">
+    <!-- for entire component-->
+
+    <div class="col-md-1 col-sm-1 col-xs-1 headersection" id="imgid">
+        <!-- for image setup-->
+        <img src="../assets/images/patient2.jpg" class="img-circle" alt="rounded image" width="65" height="65">
+
+    </div>
+
+
+    <div class="col-md-2 col-sm-2 col-xs-2 headersection">
+        <!--for Name-->
+        <h1><b>{{patients[1].name}}</b></h1><br>
+
+
+        <a href="#">
+            <span class="glyphicon glyphicon-earphone icon-size"></span>
+            <!--audio call icon-->
+        </a><span class="blankspace"></span>
+
+
+        <span>
+            <a href="#">
+                <span class="glyphicon glyphicon-facetime-video icon-size space icon-pading" id="v2"></span>
+                <!-- vidoe call icon-->
+            </a></span><span class="blankspace"></span>
+
+        <a href="#">
+            <span class="glyphicon glyphicon-comment icon-size icon-pading" id="v2"></span>
+            <!--comment icon-->
+        </a>
+    </div>
+
+
+
+    <!-- <div class="col-md-1 col-sm-1 col-xs-1 headersection">
+       
+        <div class="book">
+            <a href="#">
+                <span class="glyphicon glyphicon-plus-sign" id="plus-sign"></span>
+            </a>
+            <br>Book New<br>
+        </div>
+
+    </div> -->
+
+    <div class="col-md-2 col-sm-2 col-xs-2 headersection">
+        <!--for header divisions-->
+
+        <h4 id="heder-slides">Info</h4>
+
+
+        <p>{{patients[1].dob}}<br>{{patients[1].height}}cm </p>
+        <div class="glyphicon glyphicon-tint blooddrop"><span class="blankspace"></span>
+
+        </div>
+        <span id="bloodGroup">{{patients[1].bloodGroup}}</span>
+        <!--for blood drop icon-->
+
+
+
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2 headersection">
+        <h4 id="heder-slides">Allergies</h4>
+        <!--Allergies section-->
+
+        <div id="v1">
+            <p id="r1">Penciline</p>
+        </div>
+
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2 headersection">
+
+        <h4 id="heder-slides">Active Issues</h4>
+        <!--Active issues section-->
+
+
+        <div id="v1">
+            <p id="r1">__</p>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2 headersection">
+        <h4 id="heder-slides">Medical Problems</h4>
+        <!--Medicl Problems Section-->
+
+        <div id="v5">
+            <p id="r1">Hasthama</p>
+        </div>
+        <br>
+    </div>
+
+</div><br>
+<p id="para">Appointments/Consultations</p>
+<!--for Medical appointments/Consultations Section-->
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-4 ">
+        <app-view-symptons-history></app-view-symptons-history>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4 ">
+        <app-appointment-history></app-appointment-history>
+        
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4 ">
+        <app-prescription-history></app-prescription-history>
+        
+    </div>
+</div>

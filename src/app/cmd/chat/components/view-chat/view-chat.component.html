@@ -1,0 +1,143 @@
+<div class="container-fluid">
+    <app-top-header></app-top-header>
+    <div class="view">
+        <div class="row chat-h">
+            <app-sidebar></app-sidebar>
+            
+            <div class="col-md-3">
+                <app-view-all-chat-details></app-view-all-chat-details>
+            </div>
+            <div class="col-6">
+                <div class="chat-border">
+                    <div class="row">
+                        <div class="col-2">
+                            <div>
+                                <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil" class="img" />
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <h4 class="name">{{ChatHistory[0].name}}</h4>
+                            <span class="small italic">Last seen at 21:35</span>
+                        </div>
+                        <div class="ic col-1">
+                            <a routerLink="#"><i class="far fa-calendar-alt icon-size"></i></a>
+                        </div>
+                        <div class="ic col-1">
+                            <a routerLink="/viewsuggestprescription"><i class="fas fa-file icon-size"></i></a>
+                        </div>
+                        <div class="ic col-1">
+                            <a routerLink="#"><i class="fas fa-phone icon-size"></i></a>
+                        </div>
+                        <div class="ic col-1">
+                            <a routerLink="#"><i class="fas fa-video icon-size"></i></a>
+                        </div>
+                        <div class="ic col-1">
+                            <a href="/viewchat"><i class="fas fa-ellipsis-v icon-size"></i></a>
+                        </div>
+                    </div>
+                    <hr style="border-color: #212223" />
+                    <div class="blur">
+                        <div>
+                            <div class="docter-M">
+                                <p class="text">Hai Sir !!</p>
+                            </div>
+                            <br /><br /><br />
+                            <div class="patient-M">
+                                <p class="text">Hello</p>
+                            </div><br><br>
+    
+                            <div class="patient-M">
+                                <a href=" "><p><i class="fas fa-play-circle  slide"></i>
+                                    <input type="range" min="1" max="100"
+                                            value="1" class="range"></p></a>
+                            </div>
+                            <div class="report">
+                                <a routerLink="/viewvitals">
+                                    <div class="card">
+                                        <h6>Bill Report.doc</h6>
+                                        <p>Card subtitle.Some quick example text to build on the card title and make up the
+                                            bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </a><br />
+    
+                            </div>
+                            <div class="row patient-M1">
+                                <div class="col-2">
+                                    <a href=" "><button type="button" class="btn-sqr"><i
+                                                class="fas fa-headphones-alt"></i></button></a>
+                                </div>
+                                <div class="col-1">
+                                    <a href=" "><i class="fas fa-play-circle  slide"></i></a>
+                                </div>
+                                <div class="col-7">
+                                    <a href=" "><input type="range" min="1" max="100" value="1" class="range1"></a>
+                                </div>
+                                <div class="col-2">
+    
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="border1">
+                            <div class="row message">
+                                <div class="col-1">
+                                    <button type="button" class="btn-rounded" data-bs-toggle="collapse"
+                                        data-bs-target="#demo" aria-expanded="false" aria-controls="collapseExample"><i
+                                            class="fas fa-paperclip icon"></i></button>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" class="border-0 color" placeholder="Type Something..." />
+                                </div>
+                                <div class="col-1">
+                                    <button type="button" class="btn-rounded"><i
+                                            class="fas fa-microphone icon"></i></button>
+                                </div>
+                            </div>
+                            <div id="demo" class="collapse">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-1">
+    
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn-rounded btn-black"><i
+                                                class="far fa-file-alt"></i></button>
+                                        <p><span class="small">Document</span></p>
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn-rounded btn-black"><i
+                                                class="fas fa-camera"></i></button>
+                                        <p><span class="small">Camera</span></p>
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn-rounded btn-black"><i
+                                                class="fas fa-images"></i></button>
+                                        <p><span class="small">Gallery</span></p>
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn-rounded btn-black"><i
+                                                class="fas fa-map-marker-alt"></i></button>
+                                        <p><span class="small">location</span></p>
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn-rounded btn-black"><i
+                                                class="fas fa-user"></i></button>
+                                        <p><span class="small">Contact</span></p>
+                                    </div>
+                                    <div class="col-1">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="history col-3">
+                <app-view-history></app-view-history>
+            </div>
+
+        </div>
+    </div>
+</div>

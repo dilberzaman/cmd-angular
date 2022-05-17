@@ -1,0 +1,66 @@
+.container{
+  font-family: sans-serif;
+  color: #18385c;
+  border-radius: 10px;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  background-color: white;
+  width: 465px;
+  height: 250px;
+  border: 0.1px solid lightgray;
+  float: left;
+  padding-top: 1rem;
+  margin-top: 28px;
+}
+.headingName{
+  font-size: 25px;
+  font-weight: bold;
+}
+.btn{
+  margin-left: 5rem;
+}
+.font_12{
+  font-size: 15px;
+  margin-top: 1rem;
+  text-align: center;
+}
+.margin{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale( 1 );    
+  }
+  50% {
+    transform: scale( 1.25 ) 
+  }
+  
+}
+@keyframes respiration {
+  0% {
+    transform: scale( 1 );    
+  }
+  50% {
+    transform: scale( 1.5 ) 
+  }
+  
+}
+.bi-heart
+{
+  animation: heartbeat 1s infinite; 
+}
+
+.resp
+{
+  animation: respiration 2s infinite;
+}
+
+.bi-thermometer-high{
+  animation: heartbeat 1s infinite;
+}
+
+.diabetes{
+  animation: heartbeat 1s infinite;
+}

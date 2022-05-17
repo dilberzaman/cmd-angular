@@ -1,0 +1,55 @@
+<div class="header1 col-sm-12" >
+    
+        <ul class=" nav nav-pills header2">
+            <li><a href="#">Logout</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+            <li id="list">
+                <select id="list1">
+                    <option>jhon Doe</option>
+                </select>
+            </li>
+            <li><img id="image" src="../../../../assets/images/doctor.jpeg" alt="profile" class="img-circle"></li>
+        </ul>
+    
+  
+<div class="sidebar col-sm-2">
+    <h2 style="color:white;font-size: medium;"> Connect My Doc <span class="icon1 glyphicon glyphicon-align-left icon-color"></span>
+    <a routerLink="/dashboard"><span class="glyphicon glyphicon-stats icon-color"> Dashboard</span></a>
+     <a routerLink="/viewallpatients"><span class="glyphicon glyphicon-user icon-color"> Patient</span></a>
+     <a href="viewchat"><span class="glyphicon glyphicon-comment icon-color"> ChatRoom</span></a>
+     <a href="ViewEditAccountSettingComponent"><span class="glyphicon glyphicon-cog icon-color"> Settings</span></a>
+ </h2> 
+</div><br>
+<div class="appointment">
+    <div class="row">
+        <app-view-close></app-view-close>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-6">
+            <app-view-patient></app-view-patient> 
+        </div>
+        <div class="col-sm-6 col-xs-6">
+            <app-view-doctor></app-view-doctor>
+        </div>
+    </div>
+    <div class="row">
+        <app-view-edit-comments></app-view-edit-comments>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-xs-6">
+            <app-view-edit-recommendation></app-view-edit-recommendation>
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <app-view-edit-vitals></app-view-edit-vitals>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6">
+            <app-view-all-prescription></app-view-all-prescription>
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <app-view-edit-test></app-view-edit-test>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="VIEWCHART">
+    <div class="chat row">
+        <div class="col-2">
+            <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil" class="img">
+        </div>
+        <div class="col-6 hover">
+            <p>
+                <span class="info">Dr.John Deo</span><br>
+                <span class="online">Available</span>
+            </p>
+        </div>
+        <div style="margin-top:10px;" class="icons col-2">
+            <i class="fa-solid fa-message"></i>
+        </div>
+        <div style="margin-top:10px;padding-left:3px" class="icons col-2">
+            <i class="fas fa-ellipsis-v icon-size"></i>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <input type="search" class="search border-0" placeholder="search for chats or sessions">
+    </div>
+    <hr>
+    <div class="patient" *ngFor="let p of Patient">
+        <div class="chat row">
+
+            <div class="col-2">
+                <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil" class="img">
+            </div>
+            <div class="col-5">
+                <p>
+                    <span class="info hover">{{p.name}}</span><br>
+                    <span class="online">Active</span>
+                </p>
+            </div>
+            <div class="icons col-5">
+                <i class="fas fa-phone icon-size"></i>
+                <i class="fas fa-video icon-size"></i>
+                <i class="fas fa-ellipsis-v icon-size"></i>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <hr>
+
+
+</div>

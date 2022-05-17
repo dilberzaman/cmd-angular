@@ -1,0 +1,65 @@
+<app-top-header></app-top-header>
+<app-sidebar></app-sidebar>
+<div class="main">
+
+    <div class="row">
+        <div [class]="card5">
+            <h2 id="head">Patients</h2>
+        </div>
+        <div [class]="card4" [ngClass]="'search'">
+           <span><input type="search" [(ngModel)]="searchText" class="form-control rounded" placeholder="Search Name..." aria-label="Search"
+                aria-describedby="search-addon" /></span> 
+        </div><br>
+        <div [class]="card3" align="center">
+            <span>Sort By:</span>
+            <select>
+                <option>Recent Appointment</option>
+                <option>Old Appointment</option>
+            </select> 
+        </div>
+    </div> <br>
+
+    <div class="row" >
+        <div id="card" [class]="card4" *ngFor="let i = index;let p of patients | filter : searchText ">
+            <span [class]="pencil"></span>
+            <div class="pic" >
+                <img  src={{photo[i]}} alt="profile">
+            </div><br />
+            <a routerLink="/patientinfo">
+                <div class="details" >
+                    <p id="name">{{p.name}} </p><br>
+                    <p id="personal">United States </p><br>
+                    <p id="personal">Mobile:{{mobileNumbers[i].phoneNumber}}</p>
+                </div>
+            </a>
+            <hr>
+            <div class="row">
+                <div [class]="card4">
+                    <img class="lungs" src="../assets/images/lungs.png" alt="lungs">
+                </div>
+                <div [class]="card4"> <i class='man fas fa-male'></i></div>
+                <div [class]="card4"> <i class="heart fa fa-heartbeat"></i></div>
+            </div>
+        </div>
+    </div>
+    <footer class="row page">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" routerLink="/dashboard" aria-label="Previous">
+                        <span aria-hidden="true"><
+                        </span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="active" routerLink="/dashboard">1</a></li>
+                <li class="page-item"><a class="page-link" routerLink="/dashboard">2</a></li>
+                <li class="page-item"><a class="page-link" routerLink="/dashboard">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" routerLink="/dashboard" aria-label="Next">
+                        <span aria-hidden="true">></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>

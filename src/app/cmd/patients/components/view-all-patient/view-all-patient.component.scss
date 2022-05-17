@@ -1,0 +1,104 @@
+.lungs{
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+  }
+  #head{
+    margin-left:30px;
+  }
+  .search{
+    margin-top:10px;
+  }
+  .main{
+    margin-left: 40px;
+    background-color:rgb(218, 213, 213);
+    height:15.2cm;
+    width:auto;
+    padding-top: 4%; 
+    position:static;
+   // background:fixed;
+    //margin-top: 100px;
+  }
+   #card{
+      box-shadow: 0 4px 8px 0 rgb(204, 201, 201);
+      background-color: white;
+       width: 300px;
+       height: 95px;
+       margin: 8px 5px 3px 20px;
+       left: 9%;
+   }
+   hr{
+    margin: 3%;
+   }
+   .pic{
+       float: left;
+   }
+   img{
+       border-radius: 50%;
+       height: 40px;
+       width:40px;
+       margin-top: 10px;
+       margin-left: 10px;
+   }
+   .details{
+      margin: 2px 0px 0px 5px;
+      line-height: 0.2;
+       float: middle;
+       font-size: small;  
+   }
+  
+   #name{
+       font-weight: bold;
+       margin-left: 50px;
+       font-size: smaller;
+     }
+     #personal{
+       opacity:100% ;
+       margin-left: 50px;
+       font-size: smaller;
+     }
+     .pencil{
+        float:right; 
+        margin-top:2%; 
+        margin-right:1%; 
+        font-size: 10px;
+     }
+     .lungs{
+        
+        margin-bottom:5%;
+        margin-left:45%;
+       
+     }
+     .man{
+         padding-left: 40%;
+         margin-bottom:5%;
+     }
+     .heart{
+        padding-left: 30%;
+        margin-bottom:5%; 
+        margin-right:15%;
+     }
+     a{
+      text-decoration: none;
+       color: rgba(41, 37, 37, 0.938);
+     }
+     a:hover{
+      color: rgba(41, 37, 37, 0.938);
+     }
+     .page a.active{
+       background-color: blue;
+       color: white;
+     }
+     .page a{
+     font-size: xx-small;
+       border-radius: 4px 4px 4px 4px;
+       margin: 0px 7px 0px 7px;
+       border: 1px solid; 
+     }
+     footer {
+      margin-left: 70%;
+      bottom:0;
+      width:100%;
+      position: fixed;
+      float: right;
+   }

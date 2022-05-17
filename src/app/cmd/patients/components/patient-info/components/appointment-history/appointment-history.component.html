@@ -1,0 +1,76 @@
+<!--Main Card-->
+<div class="container" id="Maincard">
+    <div class="row r1">
+        <h1 class="Header1 col-md-8 col-sm-8 col-xs-8">Appointment History</h1>
+        <span class="col-md-4 col-sm-4 col-xs-4" id="id0">
+            <select>
+                <option value="0">2017</option>
+                <option value="1">2018</option>
+                <option value="2">2019</option>
+            </select>
+        </span>
+        <hr id="k">
+
+        <!--Card1-->
+        <div class="card" ><br>
+            <div class="row">
+                <!--Sub part of card1-->
+                <div [class]="card3" id="id1">
+                    <h1><span class="num">A</span></h1>
+                </div>
+                <div [class]="card4" id="id1">
+                    <span class="fa fa-stethoscope id2" ><b>  DR.{{doctor[0].doctorName}}</b></span>
+                    <!--Stethoscope symbol-->
+                    <p id="i">{{doctor[0].spaciality}}</p>
+                </div>
+                <div [class]="card5" id="id1">
+                    <p>
+                        <!--Clock symbol -->
+                        <span class="glyphicon glyphicon-time" id="id3"><b>13:45</b><br>
+                            <small>Today</small></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div [class]="card6">
+                    <!--Clipboard symbol-->
+                    <span class='bi bi-clipboard' id="id5"> Patient encounted chest pain morning </span><br>
+                    <span id="id6">during jogging for an hour!</span>
+                </div>
+            </div><br><br>
+        </div>
+
+
+        <!--Card2-->
+        <div class="card"><br>
+            <div class="row">
+               
+                <div [class]="card3" id="id1">
+                    <h1><span class="num">C</span></h1>
+                </div>
+                <div [class]="card4" id="id1">
+                    <span class="fa fa-stethoscope id2" ><b>  DR.{{doctor[1].doctorName}}</b></span>
+                 
+                    <p id="i">{{doctor[1].spaciality}}</p>
+                </div>
+                <div [class]="card5" id="id1">
+                    <p>
+                      
+                        <span class="glyphicon glyphicon-time" id="id3"><b>13:45</b><br>
+                            <small>1/13.2019</small></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div [class]="card6">
+                  
+                    <span class='bi bi-clipboard' id="id5"> Patient encounted chest pain morning </span><br>
+                    <span id="id6">during jogging for an hour!</span>
+                </div>
+            </div><br><br>
+        </div>
+
+
+    </div>
+</div>
+<br>

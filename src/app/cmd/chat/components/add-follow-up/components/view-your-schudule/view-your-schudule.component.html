@@ -1,0 +1,43 @@
+<div class="row ">
+    <div class="ys col-md-12">
+        <h5>Your Schedule for<br>12/june 2019</h5>
+    </div>
+    
+</div>
+
+<div class="card" *ngFor="let d of doctor">
+    <div class="row">
+      <div class="col-1">
+        <span class="A">{{d.pic}}</span>
+      </div>
+      <div class="D col-6">
+        <span class="DN">
+          <i class="s fa-solid fa-stethoscope"></i>
+          <strong>Dr.{{d.name}}</strong>
+          
+        </span>
+        <br>
+        <p>HeartSpecialist,Neorology</p>
+      </div>
+      <div class="col-1">
+        <i class="calen fa-regular fa-calendar"></i>
+      </div>
+      <div class="t col-3">
+        <p  class="d-flex">
+          <i class="fa-regular fa-clock"></i>
+          <span class="t1"><strong>13:45</strong></span>
+          <!-- <br><span class="t2">Today</span> -->
+        </p>
+      </div>
+        
+    </div>
+    <div class="row">
+      <div class="d col-md-12">
+        <p>
+          <i class="d1 fa-regular fa-clipboard"></i>
+          <span class="d2">Patient encountered chest pain</span><br> 
+          <span class="d3">Morning during jogging for an</span>
+        </p>
+      </div>
+    </div>
+</div>

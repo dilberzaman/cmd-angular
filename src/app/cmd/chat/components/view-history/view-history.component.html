@@ -1,0 +1,54 @@
+<h5 class="h5">History</h5>
+
+<div class="m row">
+  <div class="m1 col-6">
+    <button type="button" class="btn">Meets</button>
+  </div>
+  <div class="m2 col-6">
+    <a routerLink="/viewprescriptionhistory"><button type="button" class="btn">Prescription</button></a>
+  </div>
+</div>
+<div class="body">
+  <div class="calender" (click)="saverange()">
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+  </div>
+
+  <div class="card" *ngFor="let d of doctor">
+    <div class="row">
+      <div class="col-1">
+        <span class="A">{{d.status}}</span>
+      </div>
+      <div class="D col-5">
+        <span class="DN">
+          <i class="s fa-solid fa-stethoscope"></i>
+          <strong>DR.{{d.doctorName}}</strong>
+
+        </span>
+        <br><br>
+        <p>HeartSpecialist,Neorology</p>
+      </div>
+      <div class="col-1">
+        <i class="calen fa-regular fa-calendar"></i>
+      </div>
+      <div class="t col-4">
+        <p class="d-flex">
+          <i class="fa-regular fa-clock"></i>
+          <span class="t1"><strong>{{d.appointmentTime}}</strong></span>
+
+        </p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="d col-md-12">
+        <p>
+          <i class="d1 fa-regular fa-clipboard"></i>
+          <span class="d2">Patient encountered chest pain</span><br>
+          <span class="d3">Morning during jogging for an</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

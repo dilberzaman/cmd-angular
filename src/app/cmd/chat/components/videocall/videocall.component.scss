@@ -1,0 +1,190 @@
+.VIEWCHART{
+  margin-top:10px;
+}
+.vedio-call{
+  margin-top:20px;
+}
+.vcall{
+  margin-top:10px;
+  border: 1px groove #d0d0d0;
+}
+.img {
+  width: 50px;
+}
+.HAUDIO{
+  background-color:#0090ff;
+}
+.HAUDIO h6{
+  color:#fff;
+  padding-top: 15%;
+  margin-left: 3px;
+ }
+.VHead{
+  margin-top:20px;
+}
+.Header{
+  background-color:#0090ff;
+  
+  margin-top:5px;
+  margin-bottom: 10px;
+}
+/* .one{
+ padding-left:10px;
+ color:#fff;
+ font-size:25px;
+} */
+.one{
+        /* padding-left:20px;
+        margin-left: 10px; */
+        color:#fff;
+        font-size:25px;
+        padding-top:10px;
+      }
+/* .ctime{
+ padding-left:20px;
+ color:#fff;
+} */
+/* .two{
+ padding-right:15%;
+ padding-left:20px;
+ color:#fff;
+ font-size:25px;
+} */
+
+.two{
+  /* //    padding-right:60px;
+  //    padding-left:20px;
+        // margin-left: 10px; */
+        color:#fff;
+        font-size:25px;
+        padding-top:10px;
+        margin-left: 3px;
+       
+      }
+/* .three{
+ padding-right:20px;
+ padding-left:20px;
+ color:#fff;
+ font-size:30px;
+ padding-top:10px;
+} */
+
+.three{
+        /* padding-right:15px;
+        padding-left:50px; */
+        margin-left: 15px;
+        color:#fff;
+        font-size:30px;
+        padding-top:10px;
+        padding-bottom: 10px;
+      }
+/* .four{
+ padding-left:10px;
+ font-size:25px;
+ color:#fff;
+} */
+
+.four{
+        /* padding-left:15px; */
+        font-size:25px;
+        margin-left: 20px;
+        color:#fff;
+        padding-bottom: 10px;
+        padding-top:10px;
+      }
+ /* .five{
+ padding-left:10px;
+ font-size:25px;
+ color:#fff; 
+
+} */
+
+.five{
+  /* //    padding-left:15px; */
+        font-size:25px;
+        margin-left: 20px;
+        color:#fff;
+        padding-bottom: 10px;
+        padding-top:10px;
+   
+      }
+/* .six{
+  position: relative;
+  top: 10px;
+  font-size:25px;
+  color:#fff;
+  float: right;
+
+}
+ */
+
+ .six{
+      /* //  padding-left:15px; 
+      // margin-right: 10px; */
+      font-size:25px;
+      margin-left: 20px;
+      color:#fff;
+      padding-bottom: 10px;
+      padding-top:10px;
+      }
+
+
+.pic {
+ height: 495px;
+ background-color: #fff;
+ background: url("https://www.hoganlovells.com/~/media/hogan-lovells/images/people_and_bio_photos/m/mahdawi_solfa_l81785.jpg");
+ border: 2px solid #000;
+ 
+
+}
+.pic img{
+ width: 35%;
+ height: 30%;
+ float:right;
+ margin-top: 10px;
+ border: 1px solid #fff;
+ margin-right: 10px;
+ border-radius: 20%;
+}
+
+
+.VIEWISSUES{
+  margin-top:10PX;
+  border: 1px groove #d0d0d0;
+}
+
+// side bar
+.sidebar{
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #030741d5;
+  padding-top: 14px;
+  }
+  .sidebar a{
+  margin: 6px 10px 15px 6px;
+  text-decoration: none;
+  color: #dddddd;
+  display: block;
+  }
+  .sidebar a:hover{
+  color: rgb(76, 71, 71);
+  border-color: #dddddd !important;
+  }
+  a:active{
+  border-radius: 5px;
+  color: black;
+  background-color: #dddddd !important;
+  }
+  .icon1{
+  color: #dddddd;
+  font-size: 15px;
+  padding: 0px 8px 6px 6px;
+  }
+  span{
+  font-size: 12px;
+  margin-left: -8px;
+  }
