@@ -17,7 +17,7 @@ export class ChatService {
     return this.http.get<any[]>("https://cmdapiservice20220510121748.azurewebsites.net/api/Symptom")
   }
   getAppointment() {
-    return this.http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Appointment")
+    return this.http.get<any[]>("https://cmddoctor20220518111744.azurewebsites.net/api/Appointment")
   }
 
 }
