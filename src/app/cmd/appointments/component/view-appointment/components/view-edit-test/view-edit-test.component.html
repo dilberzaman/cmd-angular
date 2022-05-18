@@ -5,20 +5,54 @@
   
   <h5 id="result"><b>Search:</b></h5><br>
 
-  <select class="medicine" (change)="test($event)">
+ <select class="medicine" (change)="test($event)">
     <option>--Choose here--</option>
-    <option value="HEART">HEART</option>
-    <option value="kidney">kidney</option>
-    <option value="Heart">Heart</option>
-    <option value="liver">liver</option>
-    <option value="eyes">eyes</option>
-    <option value="=kidney">kidney</option>
-    <option value="leg">leg</option>
-    <option value="knee">knee</option>
-    <option value="=brain">brain</option>
-    <option value="BRAIN">BRAIN</option>
-    <option value="kidney">kidney</option>
-  </select>
+    <option value="HEART">Heart</option>
+    <option value="Kidney">Kidney</option>
+    <option value="Liver">Liver</option>
+    <option value="Eyes">Eyes</option>
+    <option value="Leg">Leg</option>
+    <option value="Knee">Knee</option>
+    <option value="BRAIN">Brain</option>
+  </select> 
 
 </div>  
 
+<!-- <div class="inputag">
+  <input
+    class="box"
+    matInput
+    formControlName="testDetails"
+    [matAutocomplete]="auto"
+    placeholder="Tests" 
+  required/><br /><br />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    [displayWith]="displayFnForTest"
+  >
+    <mat-option
+      *ngFor="let Test testDetails"     
+      [value]="Test"
+    >
+      {{ Test.name }}
+    </mat-option>
+  </mat-autocomplete> -->
+  <!-- <div id="container">
+    <h1>Tests</h1>
+    <h3><span><b>selected: </b></span><br></h3>
+    <h3 id="result"><b>Search:</b></h3><br>
+     <input
+    class="box"> 
+   <div style="width:50%;margin-left: 20px;"> 
+    <select>
+      <option *ngFor="let tes of Test" [value]="tes.Id">
+        {{tes.Id}}
+      </option>
+    </select>
+  </div>
+</div> -->
+
+
+
+   
+  

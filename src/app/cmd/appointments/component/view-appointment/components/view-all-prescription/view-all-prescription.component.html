@@ -1,8 +1,8 @@
-<div class="container">
+ <div class="container">
 
     <h1>Prescriptions
         <span class="icon">  
-        <a routerLink="/AddEditPrescriptionComponent"> <input class="btn1" type="button" value="+" /></a>
+        <a routerLink="/AddEditPrescriptionComponent"> <input class="btn1" type="button"  value="+" /></a>
          
         </span>
     </h1><br>
@@ -12,11 +12,41 @@
             <span class="icon"> 
                <a> <i class='fas fa-pen'></i> <i class="fa fa-times"></i></a>
            </span></h2>
-         <p>Don's Use Hot Water During Consume<span id="button">
+        <p>Don's Use Hot Water During Consume<span id="button">
                 <button type="button" class="btn">After Food </button></span>
 
         </p>
     </div><br>
     
-</div>
 
+<!-- <div class="container">
+    <div class="Prescription">
+        <div class="row">
+            <h1>Prescriptions
+                <span class="icon">  
+                <a routerLink="/AddEditPrescriptionComponent"> <input class="btn1" type="button"  value="+" /></a>
+                 
+                </span>
+            </h1><br>
+
+        </div>
+        
+        <div class="p" *ngFor="let m of MedicinePrescriptionAssociation">
+            <div class="row">
+                <div class="col-1 fColor"><strong>{{m.id}}.</strong></div>
+                <div class="col-3 fColor1">
+                    <strong>{{m.medicineName}}</strong>
+                </div>
+                <div class="col-3 aColor"><span class="s">{{m.medicineCycle}}</span></div>
+                <div class="col-4"><input type="range" min="1" max="100" value="1"
+                        class="range1">
+                </div>
+                 <div class="col-1"><i class="fa fa-times cross"></i></div> 
+
+            </div>
+            <span class="small">
+                <p class="descript">{{m.medicineDescription}}</p>
+            </span>
+            <hr>
+        </div>
+    </div> -->
