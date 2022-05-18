@@ -6,58 +6,38 @@ import { Observable } from 'rxjs';
 })
 export class ViewappointmentService {
 
-  readonly APIUrl = "http://106.51.36.182:8093/api";Â  
+  readonly APIUrl = "https://viewappointmentapi20220518091635.azurewebsites.net";Â  
   constructor(private _http: HttpClient) { }
-
+///vital////
   getvieweditvitals(){
-    return this._http.get<any[]>("http://106.51.36.182:8093/api/Vital")
+    return this._http.get<any[]>("https://viewappointmentapi20220518091635.azurewebsites.net/api/Vital")
 }
-   updatevitaldata(Id:number,data:any){
-     return this._http.post("http://106.51.36.182:8093/api/Vital",data)
-   }
-
+createVitals(data: any){
+  return this._http.post<any[]>("https://viewappointmentapi20220518091635.azurewebsites.net/api/Vital", data)
+}
+/////patient////
     getViewAllPatients() {
-     return this._http.get<any[]>("http://106.51.36.182:8090/api/Patient")
+     return this._http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/Patient")
    }
    getContact(){
-    return this._http.get<any[]>("http://106.51.36.182:8090/api/ContactDetail")
+    return this._http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/ContactDetail")
    }
+   ///////comment/////
    getViewAllComments(){
       return this._http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Appointment")
    }
-   getMedicine(){
-     return this._http.get<any[]>("http://106.51.36.182:8091/api/MedicinePrescriptionAssociation")
-   }
+  ///////test////
    getTestlist(){
-     return this._http.get<any[]>("http://106.51.36.182:8093/api/Test")
+     return this._http.get<any[]>("https://viewappointmentapi20220518091635.azurewebsites.net/api/Test")
    }
-   getTest(){
-     return this._http.get<any[]>("http://106.51.36.182:8093/api/Test")
-   }
-  //  getTestList(): Observable < any[] > {  
-
-  //   return this._http.get < any > ("http://106.51.36.182:8093/api/Test" );  
-
-  // }
-  getRecommendation(){
-    return this._http.get<any[]>("http://106.51.36.182:8093/api/recommendation")
-  }
+  //////recommendation//////
   getViewAllDoctors(){
     return this._http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Appointment")
   }
+  /////doctor///
   getDoctorData(){
     return this._http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Doctor")
   }
-  getmedicine(){
-    return this._http.get<any[]>("106.51.36.182:8091/api/MedicinePrescriptionAssociation")
-  }
-  updatecommentdata(id: number, data: any) {
-    return this._http.post('https://106.51.3.182:8093/api/Comment',data)
-   
-  }
-  getvieweditcomments() {
-    return this._http.get<any[]>("http://106.51.36.182:8093/api/Comment")
-  }
-  
-  
+
+
 }

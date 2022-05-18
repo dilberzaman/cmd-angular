@@ -14,10 +14,9 @@ export class ViewPatientComponent implements OnInit {
   ngOnInit(): void {
 
     this.ViewappointmentService.getViewAllPatients()
-
     .subscribe(patients=>this.patients=patients);
+    
     this.ViewappointmentService.getContact()
-
     .subscribe(patients=>this.mobileno=patients);
 
   }
