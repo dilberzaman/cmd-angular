@@ -27,21 +27,21 @@ h1
    text-align: right;
    font-family: "adobe-clean", sans-serif;
 }
-// .container1
-// {
-// width: 350px;
-// height: 70px;
-// margin-left: auto;
-// background-color:white;
-// border-style: hidden;
-// border-radius: 8px;  
-// border: 1px  solid #ddd;
-// row-gap: 5px;
-// margin-bottom: 5px;
-// }
+.container1
+{
+width: 420px;
+height: 60px;
+margin-left: auto;
+background-color:white;
+border-style: hidden;
+border-radius: 8px;  
+border: 1px  solid #ddd;
+row-gap: 5px;
+margin-bottom: 5px;
+}
 h2
 {
-font-size: 13px;
+font-size: 18px;
 color:  rgb(23, 23, 56);
 margin-left: 10px;
 margin-top: 5px;
@@ -50,7 +50,7 @@ font-family: "adobe-clean", sans-serif;
 }
 p
 {
- font-size: 9px;
+ font-size: 14px;
  margin-left: 15px;
  font-family: "adobe-clean", sans-serif;
 
@@ -74,13 +74,13 @@ p
    font-size: large;
    font-family: "adobe-clean", sans-serif;
 }
-// .btn
-// {
-//    background-color: rgba(2, 75, 63, 0.829);
-//     color: white;
-//     font-size: 8px;
-//     font-family: "adobe-clean", sans-serif;
-// }
+.btn
+{
+   background-color: rgba(2, 75, 63, 0.829);
+    color: white;
+    font-size: 8px;
+    font-family: "adobe-clean", sans-serif;
+}
 // .Prescription{
 //    border:0.5px solid #d0d0d0;
 //    border-radius:10px;

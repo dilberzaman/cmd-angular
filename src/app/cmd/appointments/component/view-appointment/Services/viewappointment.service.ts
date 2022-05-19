@@ -32,12 +32,22 @@ createVitals(data: any){
    }
   //////recommendation//////
   getViewAllDoctors(){
-    return this._http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Appointment")
+    return this._http.get<any[]>("https://cmddoctor20220518111744.azurewebsites.net/api/doctor")
   }
   /////doctor///
   getDoctorData(){
-    return this._http.get<any[]>("https://cmddoctor20220512222633.azurewebsites.net/api/Doctor")
+    return this._http.get<any[]>("https://cmddoctor20220518111744.azurewebsites.net/api/doctor")
   }
-
+  /////////prescription//////
+  getmedicine(){
+    return this._http.get<any[]>("https://patientapiservice20220517183434.azurewebsites.net/api/patient")
+  }
+  getMedicinePrescriptionAssociation(){
+    return this._http.get<any[]>("https://cmdapiservice20220510121748.azurewebsites.net/api/MedicinePrescriptionAssociation")
+  }
+//////////add medicinebutton////////
+addMedicine(data: any) {
+  return this._http.post("https://cmdapiservice20220510121748.azurewebsites.net/api/MedicinePrescriptionAssociation", data)
+}
 
 }

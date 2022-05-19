@@ -19,31 +19,22 @@ formBuilder: any;
 constructor(private _viewappointmentservice:ViewappointmentService, formBuilder:FormBuilder) { }
 @Output() event =new EventEmitter<string>()
 ngOnInit(): void {
-
-//   this._viewappointmentservice.getMedicinePrescriptionAssociation()
-//   .subscribe(data=>{this.MedicinePrescriptionAssociation=data,
-
-//      console.log("ChatHistory :", data)}
-// )
-//  this.MedicineForm=this.formBuilder.group({
-//   // id: new FormControl(),
-//   medicineName: new FormControl(),
-//   medicineDuration: new FormControl(),
-//   medicineCycle: new FormControl(),
-//   medicineDescription: new FormControl()
-//  }),
-//  this._viewappointmentservice.getMedicinePrescriptionAssociation().subscribe({
-//   next:(data)=>{
-//     console.log("MedicinePrescriptionAssociation:",data);
-//     this.MedicinePrescriptionAssociation=data;
-//   }
-//   // console.log("MedicinePrescriptionAssociation:")
-// }) 
+  
 }
+getdata(setflag:boolean){this._viewappointmentservice.getMedicinePrescriptionAssociation().subscribe({
+  next:(data)=>{
+    console.log("MedicinePrescriptionAssociation:",data);
+    this.MedicinePrescriptionAssociation=data;
+   }
+    // console.log("MedicinePrescriptionAssociation:")
+  })}
+
 onsubmit(){
-  // console.log(this.MedicineForm.value);
- 
-  }
+  
+  this._viewappointmentservice.addMedicine(this.MedicineForm.value).subscribe({
+    next:(res)=>console.log(res)
+  })
+}
 }
 
 

@@ -1,18 +1,21 @@
 <div class="MainDiv">
     <h1><b>Recommendation</b></h1>
     <h2><b>Search</b></h2>
+
     <div class="row">
         <div class="col-sm-6">
             <select class="Search" (change)="Doctors($event)">
                 <option>--Choose here--</option>
-                <option value="Dr.susan light">{{Doctor[1].DoctorName}}</option>
+                <option value="Dr.JhonDoe">Dr.JhonDoe</option>
                 <option value="Dr.Thomas wayne">Dr.Thomas wayne</option>
                 <option value="Dr.Roger Brooks">Dr.Roger Brooks</option>
                 <option value="Dr.Robert shrute">Dr.Robert shrute</option>
              </select>
         </div>
+
         <div id="demo" class="col-sm-6">
-            {{selected}}
+            <button class="PAV"> {{selected}} <i class='fa fa-times'></i></button>
+         
         </div>
     </div>
 
