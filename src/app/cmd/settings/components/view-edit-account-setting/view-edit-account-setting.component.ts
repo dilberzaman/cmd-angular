@@ -8,9 +8,11 @@ import { DoctorService } from './doctor.service';
   styleUrls: ['./view-edit-account-setting.component.scss']
 })
 export class ViewEditAccountSettingComponent implements OnInit {
-  doctorform: FormGroup;
-  doctordata: any;
 
+  getdoctors: any[] = [];
+  doctorform: FormGroup;
+  
+  apiurl: string;
   // step:any=1;
   // confirm(){
   //   this.step +=1;
@@ -19,40 +21,56 @@ export class ViewEditAccountSettingComponent implements OnInit {
   //   this.step -=1;
   // }
   constructor (
+    private doctordata: DoctorService, 
     private formBuilder: FormBuilder,
     private service: DoctorService
   ) { }
-
   ngOnInit(): void {
-    this.doctorform = this.formBuilder.group({
-      id: new FormControl(),
-      doctorName: new FormControl(),
-      doctorPicture: new FormControl(),
-      npinumber: new FormControl(),
-      practiseLocation: new FormControl(),
-      spaciality: new FormControl(),
-      createdAt: new FormControl(),
-      contactDetailId: new FormControl(),
-      email: new FormControl(),
-      phonenumber: new FormControl(),
-    })
+    this.getdoctordata();
 
-    this.service.getDoctorProfile(1).subscribe({
-      next:res => this.doctordata=res,
-      complete:() => this.doctorform.patchValue({
-        id:this.doctordata.id,
-        doctorName:"Jhon Doe",
-        doctorPicture:this.doctordata.doctorPicture,
-        npinumber:this.doctordata.npinumber,
-        practiseLocation:this.doctordata.practiseLocation,
-        spaciality:this.doctordata.spaciality,
-        createdAt:this.doctordata.createdAt,
-        contactDetailId:this.doctordata.contactDetail.Id,
-        email:this.doctordata.contactDetail.email,
-        phonenumber:this.doctordata.contactDetail.phoneNumber,
-        
-      })
+  }
+
+  getdoctordata(){
+    this.doctordata.getdoctordata().subscribe((res) => {
+
+      for(let r of res){
+
+        this.getdoctors.push(r)
+      }
+
     })
+  
+
+  // ngOnInit(): void {
+  //   this.doctorform = this.formBuilder.group({
+  //     id: new FormControl(),
+  //     doctorName: new FormControl(),
+  //     doctorPicture: new FormControl(),
+  //     npinumber: new FormControl(),
+  //     practiseLocation: new FormControl(),
+  //     spaciality: new FormControl(),
+  //     createdAt: new FormControl(),
+  //     contactDetailId: new FormControl(),
+  //     email: new FormControl(),
+  //     phonenumber: new FormControl(),
+  //   })
+
+    // this.service.getDoctorProfile(1).subscribe({
+    //   next:res => this.doctordata=res,
+    //   complete:() => this.doctorform.patchValue({
+    //     id:this.doctordata.id,
+    //     doctorName:"Jhon Doe",
+    //     doctorPicture:this.doctordata.doctorPicture,
+    //     npinumber:this.doctordata.npinumber,
+    //     practiseLocation:this.doctordata.practiseLocation,
+    //     spaciality:this.doctordata.spaciality,
+    //     createdAt:this.doctordata.createdAt,
+    //     contactDetailId:this.doctordata.contactDetail.Id,
+    //     email:this.doctordata.contactDetail.email,
+    //     phonenumber:this.doctordata.contactDetail.phoneNumber,
+        
+    //   })
+    // })
   }
   Edit:boolean = true
 
@@ -78,10 +96,10 @@ export class ViewEditAccountSettingComponent implements OnInit {
       }
     }
     console.log(data)
-    this.service.updateDoctorProfile(this.doctorform.get('id').value,data).subscribe({
-      next:res => console.log(res),
-      error:err => console.log(err)
-    })
-    this.Edit = !this.Edit 
+    // this.service.updateDoctorProfile(this.doctorform.get('id').value,data).subscribe({
+    //   next:res => console.log(res),
+    //   error:err => console.log(err)
+    // })
+    // this.Edit = !this.Edit 
   }
 }

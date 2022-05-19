@@ -111,18 +111,18 @@
     
     <label>Name</label> &nbsp;&nbsp;
     <select><option value="doctor" >DR.</option>></select>
-    <input placeholder="" formControlName="doctorName" [disabled]="!Edit" ><br><br>
+    <input placeholder="{{getdoctors[0].doctorName}}" ><br><br>
     <label>Email</label> &nbsp;&nbsp;
-    <input placeholder="Sammywin@doctor.com" formControlName="email" [disabled]="!Edit" > &nbsp; &nbsp;
+    <input placeholder="Jhondoe@gmail.com"> &nbsp; &nbsp;
     <label>Phone No </label> &nbsp;&nbsp;
-    <input placeholder="9123456789" formControlName="phonenumber" [disabled]="!Edit" > <br><br>
+    <input placeholder="{{getdoctors[0].contactDetailId}}"> <br><br>
     <label>Speciality</label> &nbsp;&nbsp;
-    <input placeholder="cardiologist" formControlName="spaciality" [disabled]="!Edit" ><br><br>
+    <input placeholder="{{getdoctors[0].spaciality}}" ><br><br>
     <label>NPI no</label> &nbsp;&nbsp;
-    <input placeholder="" formControlName="npinumber" [disabled]="!Edit" ><br><br>
+    <input placeholder="{{getdoctors[0].npinumber}}" ><br><br>
     <section>
     <label >Practice Location </label> &nbsp;&nbsp;
-    <input placeholder="" formControlName="practiseLocation" [disabled]="!Edit">
+    <input placeholder="{{getdoctors[0].practiseLocation}}" >
     </section>
 </div> 
     </form>
