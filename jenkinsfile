@@ -9,6 +9,7 @@ pipeline
             steps 
             {
                 echo 'Building..'
+                sh 'npm run-script build'
             }
         }
         
