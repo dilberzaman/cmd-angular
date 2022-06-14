@@ -1,23 +1,22 @@
-pipeline 
-{
+pipeline {
     agent any
-    stages 
-    {
-      stage('Install') 
-        {
-          steps 
-            { 
-             sh 'npm install' 
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh 'mvn clean install'
             }
         }
-      stage('Build') 
-        {
-            steps 
-            {
-                echo 'Building..'
-                sh 'npm run-script build'
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
-            
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
 }
