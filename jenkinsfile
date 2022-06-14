@@ -1,24 +1,24 @@
 pipeline 
 {
-  agent any 
+agent any
+{
+stages 
+{
+  stage('Gitlab')
   {
-    stages 
+   steps
+   {
+     git branch: 'dev', url:'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
+   }
+  }
+  stage('build the project')
+  {
+    steps
     {
-    stage('Install') 
-    {
-      steps 
-      { 
-        sh 'npm install' 
-      }
-    }
-    }
- 
-    stage('Build') 
-    {
-      steps 
-      { 
-        sh 'npm run-script build' 
-      }
+      echo 'building the project'
+      sh 'mvn clean install'
     }
   }
+}
+}
 }
