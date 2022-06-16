@@ -1,16 +1,22 @@
-# BASE IMAGE with an alias #
-FROM node:14.2.0-alpine3.11 as build
+FROM node:16.14.0-alpine3.14 as build
+
+#working directory of containerized app
 WORKDIR /app
 
-# Install Angular CLI to run Build #
-RUN npm install -g @angular/cli
-COPY ./package.json .
-RUN npm install
-COPY . .
-RUN ng build
-# BASE IMAGE with an alias #
-FROM nginx as runtime
+#copy the react app to the container
+COPY . /app/
 
-# Copy contents from the other container with alias "build" #
-# onto the specified path in the current container#
+#prepare the container for building react
+RUN npm install
+
+# RUN npm install react-search-field --save
+RUN npm run build
+
+#prepare nginx
+FROM nginx:1.16.0-alpine
 COPY --from=build /app/dist/cmd_fe /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
+
+#fire for nginx
+EXPOSE 80CMD [ "nginx","-g","daemon off;" ]
