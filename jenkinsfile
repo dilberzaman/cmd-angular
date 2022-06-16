@@ -2,7 +2,7 @@ pipeline
 {
    environment
    {
-    registry = "skillassure/cmd-fe-hcl-dotnet2022"
+    registry = "skillassure/cmd-angular"
     registryCredential = "Docker-Hub-Auth"
     dockerImage = ''
    }
