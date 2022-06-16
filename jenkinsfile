@@ -2,8 +2,8 @@ pipeline
 {
    environment
    {
-    registry = "skillassure-training/cmd-angular"
-    registryCredential = "Docker-Hub-Auth"
+    registry = "dilber.zaman@skillassure.com/cmd-angular"
+    registryCredential = "gitlab"
     dockerImage = ''
    }
  agent any
