@@ -1,12 +1,17 @@
-FROM node:10.6-alpine
-ENV PORT 8080
-EXPOSE 8080 
-
-ARG NODE_ENV=production
-ENV NODE_ENV $NODE_ENV
-
-WORKDIR /usr/src/app
-COPY package.json .
+FROM node:14-alpine3.12 as build
+FROM node:16.14.0-alpine3.14 as build
+#working directory of containerized 
+appWORKDIR /app
+#copy the react app to the container
+COPY . /app/#prepare the container for building react
 RUN npm install
-COPY . .
-CMD [ "npm", "start" ]
+# RUN npm install react-search-field --save
+RUN npm run build
+#prepare nginx
+FROM nginx:1.16.0-alpine
+COPY --from=build /app/dist/cmd_fe /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
+#fire for nginx
+EXPOSE 80CMD [ "nginx","-g","daemon off;" ]
+
