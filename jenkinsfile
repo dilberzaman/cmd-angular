@@ -23,7 +23,7 @@ pipeline
         {
          steps
          {
-             echo "Building dockerimage"
+          echo "Building dockerimage"
           script
           {
            dockerImage = docker.buildregistry +":$BUILD_NUMBER"
