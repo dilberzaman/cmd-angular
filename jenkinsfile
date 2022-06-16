@@ -2,7 +2,7 @@ pipeline
 {
    environment
    {
-    registry = "skillassure/cmd-angular"
+    registry = "skillassure-training/cmd-angular"
     registryCredential = "Docker-Hub-Auth"
     dockerImage = ''
    }
