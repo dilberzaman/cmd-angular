@@ -1,5 +1,11 @@
 pipeline 
 {
+   environment
+   {
+    registry = "skillassure/cmd-fe-hcl-dotnet2022"
+    registryCredential = "Docker-Hub-Auth"
+    dockerImage = ''
+   }
  agent any
    stages
     {
