@@ -1,17 +1,6 @@
-version: '3.7'
-services:
-    nginx-proxy:
-        image:jwilder/nginx-proxy
-        network_mode:bridge
-web:
- image: 
-     nginx:latest
-ports:
-- "8080:80"
-volumes:
- - ./src:/usr/share/nginx/html
-links:
- - php
-php:
- image: 
-     php:7-fpm
+version: "3"
+services: 
+    angular-app:
+        build: .
+        ports: 
+            - 8080:80
