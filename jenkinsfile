@@ -21,10 +21,13 @@ pipeline
         }
        stage('Build dockerimage')
         {
-          steps{echo "Building dockerimage"
+         steps
+         {
+             echo "Building dockerimage"
           script
-        {
+          {
            dockerImage = docker.buildregistry +":$BUILD_NUMBER"
+          }
         }
       }
    }
