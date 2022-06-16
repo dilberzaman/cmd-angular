@@ -13,4 +13,4 @@ FROM nginx as runtime
 
 # Copy contents from the other container with alias "build" #
 # onto the specified path in the current container#
-COPY --from=build /app/dist/MyAngularApp /usr/share/nginx/html
+COPY --from=build /app/dist/cmd_fe /usr/share/nginx/html
