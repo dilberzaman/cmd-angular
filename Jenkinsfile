@@ -7,7 +7,6 @@ pipeline
     dockerImage = ''
     }
     agent any
-
     stages 
     {
         stage('Build') 
@@ -36,7 +35,5 @@ pipeline
              url:'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
             }
         }    
-    }
-}
     }
 }
