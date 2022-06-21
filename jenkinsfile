@@ -1,21 +1,39 @@
 pipeline {
-    agent any
+    environment{
+    registry = "dilber.zaman@skillassure.com/cmd-angular"
+    registryCredential = "gitlab"
+    dockerImage = ''
+  }
+  agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
+  stages {
+     stage('Build docker image'){
+      steps{
+        echo "Building docker image"
+        script{
+          dockerImage = docker.build registry + ":$BUILD_NUMBER" 
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+      }
     }
+
+    stage('Push docker image'){
+      steps{
+        echo "Pushing docker image"
+        script{
+           docker.withRegistry('',registryCredential) {
+            dockerImage.push()
+            dockerImage.push('latest')
+          }
+        }
+      }      
+    }
+    //stage('Deploy to Dev'){   
+      //steps{
+      //  echo "Deploying to dev environment"
+      //  sh 'docker rm -f cmd-fe-hcl-dotnet2022 || true'
+      //  sh 'docker run -d --name=cmd-fe-hcl-dotnet2022 -p 85:80 -e VIRTUAL_HOST=cmd.learn.skillassure.com -e  ////LETSENCRYPT_HOST=cmd.learn.skillassure.com skillassure/cmd-fe-hcl-dotnet2022'
+        //sh 'npm start'
+    //  }
+   // }  
+  }
 }
