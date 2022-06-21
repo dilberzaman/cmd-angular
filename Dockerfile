@@ -15,7 +15,7 @@ RUN npm run build
 #prepare nginx
 FROM nginx:1.16.0-alpine
 COPY --from=build /app/dist/cmd_fe /usr/share/nginx/html
-RUN rm /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/nginx.conf
 COPY nginx/nginx.conf /etc/nginx/conf.d
 
 #fire for nginx
