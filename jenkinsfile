@@ -7,11 +7,7 @@ pipeline {
   agent any
 
   stages {
-      stage('Gitlab'){                
-                steps{
-			git branch: 'dev', credentialsId: 'gitlab', url: 'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
-            }
-        }
+      
      stage('Build docker image'){
       steps{
         echo "Building docker image"
