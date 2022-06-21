@@ -13,7 +13,7 @@ pipeline
         {
            steps
             {
-                 git branch: 'dev', credentialsId: '1',url:'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
+                 git branch: 'dev', credentialsId: 'gitlab',url:'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
          
             }       
         }
