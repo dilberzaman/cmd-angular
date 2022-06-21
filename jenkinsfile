@@ -1,7 +1,7 @@
 pipeline {
     environment{
-    registry = "skillassure/cmd-fe-hcl-dotnet2022"
-    registryCredential = "Docker-Hub-Auth"
+    registry = "dilber.zaman@skillassure.com/cmd-angular"
+    registryCredential = "gitlab"
     dockerImage = ''
   }
   agent any
@@ -9,22 +9,11 @@ pipeline {
   stages {
        stage('Gitlab'){                
                 steps{
-					git branch: 'dev', credentialsId: 'Gitlab-Skillassure-Auth', url: 'http://106.51.36.182:8095/skillassure-training/lob/fit/hcl/tracks/dot-net-jan-22/final_project_execution/cmd_app.git'
+				git branch: 'dev', credentialsId: 'gitlab',url:'http://106.51.36.182:8095/skillassure-training/lob/fit/opteamix/tracks/devops/cmd-angular.git'
             }
         }
     
-   //  stage('Sonarqube'){
-      // steps{
-        // echo "Sonarqube codequality"
-       //  sh '''
-       //   sonar-scanner \
-              //-Dsonar.projectKey=HCL.NET \
-            //  -Dsonar.sources=. \
-            //  -Dsonar.host.url=https://codequality.learn.skillassure.com \
-             // -Dsonar.login=2adabe8a9f412d1c53b31be9deb7d5997c493b72
-         //'''
-       //}
-   //  }
+   
     
      stage('Build docker image'){
       steps{
@@ -46,13 +35,13 @@ pipeline {
         }
       }      
     }
-    stage('Deploy to Dev'){   
-      steps{
-        echo "Deploying to dev environment"
-        sh 'docker rm -f cmd-fe-hcl-dotnet2022 || true'
-        sh 'docker run -d --name=cmd-fe-hcl-dotnet2022 -p 85:80 -e VIRTUAL_HOST=cmd.learn.skillassure.com -e  LETSENCRYPT_HOST=cmd.learn.skillassure.com skillassure/cmd-fe-hcl-dotnet2022'
+    //stage('Deploy to Dev'){   
+      //steps{
+      //  echo "Deploying to dev environment"
+      //  sh 'docker rm -f cmd-fe-hcl-dotnet2022 || true'
+      //  sh 'docker run -d --name=cmd-fe-hcl-dotnet2022 -p 85:80 -e VIRTUAL_HOST=cmd.learn.skillassure.com -e  ////LETSENCRYPT_HOST=cmd.learn.skillassure.com skillassure/cmd-fe-hcl-dotnet2022'
         //sh 'npm start'
-      }
-    }  
+    //  }
+   // }  
   }
 }
