@@ -1,7 +1,7 @@
 pipeline {
     environment{
     registry = "dilberzaman/cmd-angular"
-    registryCredential = "github"
+    registryCredential = "gitlab"
     dockerImage = ''
   }
   agent any
