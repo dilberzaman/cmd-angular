@@ -1,39 +1,47 @@
-pipeline {
-    environment{
+pipeline 
+{
+    environment
+    {
     registry = "dilberzaman/cmd-angular"
     registryCredential = "github"
     dockerImage = ''
-  }
+    }
   agent any
 
-  stages {
+  stages 
+  {
       
-     stage('Build docker image'){
-      steps{
+     stage('Build docker image')
+     {
+      steps
+      {
         echo "Building docker image"
-        script{
+        script
+        {
           dockerImage = docker.build registry + ":$BUILD_NUMBER" 
         }
       }
-    }
+     }
 
-    stage('Push docker image'){
-      steps{
+     stage('Push docker image')
+     {
+      steps
+      {
         echo "Pushing docker image"
-        script{
-           docker.withRegistry('',registryCredential) {
+        script
+        {
+           docker.withRegistry('',registryCredential) 
+           {
             dockerImage.push()
             dockerImage.push('latest')
-          }
+           }
         }
       }      
-    }
-    stage('Deploy to Dev'){   
-      steps{
-        echo "Deploying to dev environment"
-        sh 'docker rm -f cmd-angular || true'
-        sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.hopto.org -e LETSENCRYPT_HOST=skillassure.hopto.org dilberzaman/cmd-angular'
-      }
-    }  
+     }
+    stage("deploy in k8 cluster")
+     {
+      kubernetsDeploy(configs: 'springBootMongo.yml',kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG', enableConfigSubstitution: true)
+     }
+    
   }
-}
+}  
