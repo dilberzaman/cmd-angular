@@ -3,7 +3,7 @@ pipeline
     environment
     {
     registry = "dilberzaman/cmd-angular"
-    registryCredential = "github"
+    registryCredential = "dockerhub"
     dockerImage = ''
     }
   agent any
@@ -38,15 +38,15 @@ pipeline
         }
       }      
      }
-//     stage('Deploy to Dev')
- //    {   
-   //   steps
-     // {
-       // echo "Deploying to dev environment"
-       // sh 'docker rm -f cmd-angular || true'
-       // sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.hopto.org -e LETSENCRYPT_HOST=skillassure.hopto.org dilberzaman/cmd-angular'
-   //   }
-   //  }
+     stage('Deploy to Dev')
+     {   
+      steps
+      {
+        echo "Deploying to dev environment"
+        sh 'docker rm -f cmd-angular || true'
+        sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.ddns.net -e LETSENCRYPT_HOST=skillassure.ddns.net dilberzaman/cmd-angular'
+      }
+    }
     
   }
 }  
