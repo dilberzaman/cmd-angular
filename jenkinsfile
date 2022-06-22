@@ -38,12 +38,14 @@ pipeline
         }
       }      
      }
-    stage("deploy in k8 cluster")
-     {
-       steps
-       {
-          kubernetsDeploy(configs: 'springBootMongo.yml', kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG', enableConfigSubstitution: true)
-       }
+     stage('Deploy to Dev')
+     {   
+      steps
+      {
+        echo "Deploying to dev environment"
+        sh 'docker rm -f cmd-angular || true'
+        sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.hopto.org -e LETSENCRYPT_HOST=skillassure.hopto.org dilberzaman/cmd-angular'
+      }
      }
     
   }
