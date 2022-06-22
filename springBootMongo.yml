@@ -13,7 +13,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: dilberzaman/cmd-angular
+      - image: dilberzaman/spring-boot-mongo
         name: springboot
         ports:
         - name: springboot
