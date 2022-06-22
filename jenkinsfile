@@ -44,7 +44,14 @@ pipeline
       {
         echo "Deploying to dev environment"
         sh 'docker rm -f cmd-angular || true'
-        sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.ddns.net -e LETSENCRYPT_HOST=skillassure.ddns.net dilberzaman/cmd-angular'
+        //sh 'docker run -d --name=cmd-angular -p 85:80 -e VIRTUAL_HOST=skillassure.ddns.net -e LETSENCRYPT_HOST=skillassure.ddns.net dilberzaman/cmd-angular'
+        sh 'docker run -d --name=cmd-angular -p 85:80 dilberzaman/cmd-angular'
+      }
+    }
+    
+  }
+}  
+
       }
     }
     
