@@ -38,26 +38,26 @@ pipeline
         }
       }      
      }
-//     stage('Deploy to Dev')
-//     {   
-//      steps
-//      {
-//        echo "Deploying to dev environment"
-//        sh 'docker rm -f cmd-angular || true'
-        //sh 'docker run -d --name=cmd-angular -p 85:80 VIRTUAL_HOST=skillassure.ddns.net -e LETSENCRYPT_HOST=skillassure.ddns.net dilberzaman/cmd-angular'
-//        sh 'docker run -d --name=cmd-angular -p 85:80 dilberzaman/cmd-angular'
-//      }
-//     }
-    stage("deploy k8")
-    {
+   stage('Deploy to Dev')
+     {   
       steps
       {
-        script
-        {
-         kubernetesDeploy(configs: "dilberzaman/cmd-angular", kuberconfigId: "KUBERNETES_CLUSTER")
-        }
+        echo "Deploying to dev environment"
+        sh 'docker rm -f cmd-angular || true'
+        //sh 'docker run -d --name=cmd-angular -p 85:80 VIRTUAL_HOST=skillassure.ddns.net -e LETSENCRYPT_HOST=skillassure.ddns.net dilberzaman/cmd-angular'
+        sh 'docker run -d --name=cmd-angular -p 85:80 dilberzaman/cmd-angular'
       }
-    }
+     }
+//    stage("deploy k8")
+  //  {
+    //  steps
+      //{
+        //script
+        //{
+         //kubernetesDeploy(configs: "dilberzaman/cmd-angular", kuberconfigId: "KUBERNETES_CLUSTER")
+       // }
+     // }
+    //}
   }
 }  
  
