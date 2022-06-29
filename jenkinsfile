@@ -44,7 +44,7 @@ pipeline
       {
         script
         {
-         kubernetesDeploy(configs: "deployment.yaml", kubeconfigId: "KUBERNETES_CLUSTER")
+         kubernetesDeploy(configs: "dilberzaman/cmd-angular", kubeconfigId: "KUBERNETES_CLUSTER")
         }
       }
     }
