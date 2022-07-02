@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.build registry + ":$BUILD_NUMBER"
+        image: dilberzaman/cmd-angular
         ports:
         - containerPort: 8080
         
