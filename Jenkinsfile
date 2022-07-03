@@ -16,7 +16,7 @@ pipeline
       {
         script
         {
-         kubernetesDeploy(configs: "deployment.yaml", kubeconfigId: "KUBERNETES_CLUSTER")
+         kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "KUBERNETES_CLUSTER")
         }
       }
     }
