@@ -25,7 +25,7 @@ pipeline
               -Dsonar.login=sqp_90fd8c531334f8238be92c00eea1f2e198e205ae
           '''
 
-        
+      }
         
       }
     }
