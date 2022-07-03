@@ -13,11 +13,11 @@ pipeline
       steps{
         echo "Sonarqube codequality"
         sh '''
-        sonar-scanner \
-        -Dsonar.projectKey=cmd-angular \
-        -Dsonar.sources=. \
-        -Dsonar.host.url=http://52.45.81.194:9000 \
-        -Dsonar.login=sqp_8ec9c3c9da415947a920592f3242c631757ab4a8
+            sonar-scanner \
+            -Dsonar.projectKey=cmd-angular \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=http://52.45.81.194:9000 \
+            -Dsonar.login=sqp_2fc04a2144591f598de8ff8bdabb486ab85a5060
           '''
       }
     }
