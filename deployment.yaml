@@ -1,32 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bb-demo
-  namespace: default
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      app: nginx
   template:
     metadata:
       labels:
-        bb: web
+        app: nginx 
     spec:
       containers:
-      - name: bb-site
+      - name: nginx
         image: dilberzaman/cmd-angular:latest
+        ports:
+        - containerPort: 8090
+        
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: bb-entrypoint
-  namespace: default
+  name: nginx-service
 spec:
-  type: NodePort
   selector:
-    bb: web
+    app: nginx
   ports:
-  - port: 3000
-    targetPort: 3000
-    nodePort: 30001
+  - protocol: TCP
+    port: 85
+    targetPort: 8080
