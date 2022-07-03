@@ -17,7 +17,7 @@ pipeline
             -Dsonar.organization=basavarajbhavi \
             -Dsonar.projectKey=basavarajbhavi_cmd \
             -Dsonar.sources=. \
-            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.host.url=https://sonarcloud.io"
           '''
       }
     }
