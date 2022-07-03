@@ -11,19 +11,7 @@ pipeline
   stages 
   {
     steps {
-
-                script{
-
-                    echo '=========== SonarQube analysis ============'
-
-                    withSonarQubeEnv('SonarQube') {
-
-                        sh '${scannerHome}/bin/sonar-scanner --version'
-
-                    }
-
-                }
-    }
+               
      stage('Sonarqube'){
       steps{
         echo "Sonarqube codequality"
