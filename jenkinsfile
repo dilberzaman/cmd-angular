@@ -5,7 +5,7 @@ pipeline
     registry = "dilberzaman/cmd-angular"
     registryCredential = "dockerhub"
     dockerImage = ''
-    //scannerHome = tool 'sonar_scanner'
+    scannerHome = tool 'sonar_scanner'
     }
   agent any
   stages 
@@ -15,7 +15,7 @@ pipeline
         echo "Sonarqube codequality"
         
           sh '''
-          "${scannerHome}/bin/sonar-scanner --version"
+         // "${scannerHome}/bin/sonar-scanner --version"
             sonar-scanner \
               -Dsonar.projectKey=get2aha-admin \
               -Dsonar.sources=. \
