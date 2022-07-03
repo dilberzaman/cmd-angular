@@ -13,7 +13,7 @@ pipeline
       steps{
         echo "Sonarqube codequality"
         sh '''
-            sonar-scanner \
+            "${scannerHome}/bin/sonar-scanner \
             -Dsonar.organization=basavarajbhavi \
             -Dsonar.projectKey=basavarajbhavi_cmd \
             -Dsonar.sources=. \
