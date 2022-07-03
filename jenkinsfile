@@ -10,14 +10,11 @@ pipeline
   agent any
   stages 
   {
-    steps {
                
      stage('Sonarqube'){
       steps{
         echo "Sonarqube codequality"
-        
-          sh '''
-        
+          sh ''' 
             sonar-scanner \
               -Dsonar.projectKey=get2aha-admin \
               -Dsonar.sources=. \
@@ -27,7 +24,7 @@ pipeline
 
       }
         
-      }
+      
     }
      stage('Build docker image')
      {
