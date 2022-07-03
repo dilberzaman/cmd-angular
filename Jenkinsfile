@@ -1,6 +1,9 @@
 pipeline {
       agent any
-      stage('SonarQube analysis') {
+
+stages 
+  {
+       stage('SonarQube analysis') {
 
             environment {
 
@@ -9,6 +12,7 @@ pipeline {
             }
 
             steps {
+                
 
                 script{
 
@@ -21,6 +25,24 @@ pipeline {
                     }
 
                 }
+            }
+      }
+               
+     stage('Sonarqube'){
+      steps{
+        echo "Sonarqube codequality"
+          sh ''' 
+            sonar-scanner \
+              -Dsonar.projectKey=get2aha-admin \
+              -Dsonar.sources=. \
+              -Dsonar.host.url=http://15.206.64.114:9000 \
+              -Dsonar.login=sqp_90fd8c531334f8238be92c00eea1f2e198e205ae
+          '''
 
       }
+        
+      
+    }
+      
+       }   
 }
