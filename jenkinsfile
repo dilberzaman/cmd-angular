@@ -23,6 +23,7 @@ pipeline
                     }
 
                 }
+    }
      stage('Sonarqube'){
       steps{
         echo "Sonarqube codequality"
@@ -79,5 +80,5 @@ pipeline
     }
   }
 }
-}  
+
  
