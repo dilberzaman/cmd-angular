@@ -5,7 +5,7 @@ pipeline
     registry = "dilberzaman/cmd-angular"
     registryCredential = "dockerhub"
     dockerImage = ''
-    scannerHome = tool 'sonar_scanner'
+    //scannerHome = tool 'sonar_scanner'
     }
   agent any
   stages 
