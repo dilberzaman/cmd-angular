@@ -15,7 +15,7 @@ pipeline
         echo "Sonarqube codequality"
         
           sh '''
-          //"${scannerHome}/bin/sonar-scanner --version"
+        
             sonar-scanner \
               -Dsonar.projectKey=get2aha-admin \
               -Dsonar.sources=. \
