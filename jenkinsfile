@@ -5,6 +5,7 @@ pipeline
     registry = "dilberzaman/cmd-angular"
     registryCredential = "dockerhub"
     dockerImage = ''
+    scannerHome = tool 'sonar_scanner'
     }
   agent any
   stages 
@@ -12,8 +13,7 @@ pipeline
      stage('Sonarqube'){
       steps{
         echo "Sonarqube codequality"
-        def scannerHome = tool 'sonar';
-        withSonarQubeEnv(){
+        
           sh '''
           "${scannerHome}/bin/sonar-scanner --version"
             sonar-scanner \
@@ -23,7 +23,7 @@ pipeline
               -Dsonar.login=sqp_90fd8c531334f8238be92c00eea1f2e198e205ae
           '''
 
-        }
+        
         
       }
     }
