@@ -5,11 +5,24 @@ pipeline
     registry = "dilberzaman/cmd-angular"
     registryCredential = "dockerhub"
     dockerImage = ''
-    //scannerHome = tool 'sonar_scanner'
+    scannerHome = tool 'sonar_scanner'
     }
   agent any
   stages 
   {
+    steps {
+
+                script{
+
+                    echo '=========== SonarQube analysis ============'
+
+                    withSonarQubeEnv('SonarQube') {
+
+                        sh '${scannerHome}/bin/sonar-scanner --version'
+
+                    }
+
+                }
      stage('Sonarqube'){
       steps{
         echo "Sonarqube codequality"
