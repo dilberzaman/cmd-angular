@@ -14,10 +14,10 @@ pipeline
         echo "Sonarqube codequality"
         sh '''
             sonar-scanner \
-            -Dsonar.projectKey=cmd-angular \
+            -Dsonar.organization=basavarajbhavi \
+            -Dsonar.projectKey=basavarajbhavi_cmd \
             -Dsonar.sources=. \
-            -Dsonar.host.url=http://52.45.81.194:9000 \
-            -Dsonar.login=sqp_2fc04a2144591f598de8ff8bdabb486ab85a5060
+            -Dsonar.host.url=https://sonarcloud.io
           '''
       }
     }
